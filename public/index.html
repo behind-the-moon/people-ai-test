@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Exchange Rates</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style>
+      rates #chart,[data-is="rates"] #chart {
+        height: 400px;
+      }
+      rates #chart text,[data-is="rates"] #chart text {
+        font-size: 12px;
+      }
+      rates .bar,[data-is="rates"] .bar {
+        fill: steelblue;
+      }
+      rates .bar.up:hover,[data-is="rates"] .bar.up:hover {
+        fill: #3c763d;
+      }
+      rates .bar.down:hover,[data-is="rates"] .bar.down:hover {
+        fill: #a94442;
+      }
+      rates .x.axis path,[data-is="rates"] .x.axis path,rates .x.axis line,[data-is="rates"] .x.axis line {
+        display: none;
+      }
+      rates line.median,[data-is="rates"] line.median {
+        stroke: #5cb85c;
+        stroke-dasharray: 5, 5;
+      }
+      .text-info {
+        fill: #31708f;
+      }
+      .text-success {
+        fill: #3c763d;
+      }
+    </style>
+</head>
+
+<body>
+    <rates>
+        <div id="application" class="container">
+        </div>
+        <div class="container text-center">
+          <svg id="chart" width="900" height="420"></svg>
+        </div>
+        <hr/>
+    </rates>
+    <div class="container">
+        <h2>People.ai Frontend Mini Test Project</h2>
+        <p>
+            Please implement the simple application as the example above.
+            The application is providing exchange rates for last 20 days.
+        </p>
+        <ul>
+            <li>
+                Use <a href="http://fixer.io">http://fixer.io</a> as API source;
+            </li>
+            <li>
+                Build similar chart;
+            </li>
+            <li>
+                Provide an ability for users to choose/toggle currencies;
+            </li>
+            <li>
+                Update the chart/legend from loaded data;
+            </li>
+            <li>
+                Store current selection in browser URL and support loading from it;
+            </li>
+        </ul>
+        <p>Any improvements are welcome!</p>
+    </div>
+    <script type="text/javascript" src="./bundle.js"></script>
+</body>
+</html>
